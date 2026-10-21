@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love 🤍</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+    rel="stylesheet"
+>
+
+</head>
+
+<body>
+  <!-- =========================
+       PASSWORD SCREEN
+       Change the password here:
+       script.js → CORRECT_PASSWORD
+       ========================= -->
+  <div id="lockScreen" class="screen">
+    <div class="lock-card">
+      <div class="lock-icon">🔐</div>
+      <p class="eyebrow">A little something for you</p>
+      <h1>Only you can open this.</h1>
+      <p class="muted">Enter the password I made for our little corner. 🤍</p>
+
+      <div class="password-wrap">
+        <input id="passwordInput" type="password" placeholder="Enter password" autocomplete="off">
+        <button id="togglePassword" type="button" aria-label="Show password">◉</button>
+      </div>
+
+      <button id="unlockBtn" class="primary-btn">Unlock my letter →</button>
+      <p id="passwordError" class="error"></p>
+      <p class="hint">Hint: <span id="passwordHint">our special date</span></p>
+    </div>
+  </div>
+
+  <!-- =========================
+       MAIN LETTER
+       ========================= -->
+  <main id="mainContent" class="hidden">
+
+    <nav class="topbar">
+      <div class="brand">I + You <span>♡</span></div>
+      <div class="month-badge">1 MONTH</div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">JUST FOR GENZO</p>
+        <h1>One month of<br><span>us.</span></h1>
+        <p class="hero-text">
+         So grateful for this first month with you.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#letter" class="primary-btn">Read my letter ↓</a>
+          <button id="musicButton" class="secondary-btn">♫ Listen on Spotify</button>
+          
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="photo-placeholder">
+    <img src="c:\Users\almoite\Downloads\cca1ca99-22d0-40f9-ba91-7ca6480749f5.jpeg" alt="Our first month">
+          <small> 12.07.25</small>
+        </div>
+        <div class="card-bottom">
+          <span>our first month</span>
+          <span>♡</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>01</strong><span>month</span></div>
+      <div><strong>∞</strong><span>memories</span></div>
+      <div><strong>01</strong><span>favorite person</span></div>
+    </section>
+
+    <section id="letter" class="letter-section">
+      <div class="section-label">01 — A LETTER FOR YOU</div>
+
+      <article class="letter-card">
+        <div class="letter-top">
+          <span>22 · 10 · 2026</span>
+          <span>♡</span>
+        </div>
+
+        <h2>Hi, baby.</h2>
+
+        </p>
+
+        <p>
+          I know one month might sound short, but somehow you've already
+          become such a special part of my daily routine. Thank you for
+          listening to me, understanding me, making sure I'm okay, and
+          for all the little things you do that mean more to me than you know.
+        </p>
+
+        <p>
+          I love how I can be myself around you — even on the weird,
+          chaotic, quiet, or random days. Thank you for choosing
+          me and for making this little "us" feel safe and real. 🫶🏻
+        </p>
+
+        <p>
+          Here’s to our first month, baby. More calls, more kwento, and more moments with you. I’m just really happy it’s you. 🤍
+        </p>
+
+        <p class="highlight">
+          I don't need anything grand, baby. I just want more days with you.
+          That's already enough for me. ♡
+        </p>
+
+        <p>
+          Happy first monthsary to us, baby. I love you. 🖤
+        </p>
+
+        <div class="signature">
+          Always yours,<br>
+          <strong>Iris</strong> ♡
+        </div>
+      </article>
+    </section>
+
+    <section class="memory-section">
+      <div class="section-label">02 — LITTLE THINGS I LOVE</div>
+
+      <div class="memory-grid">
+        <div class="memory">
+          <span>01</span>
+          <h3>The way you listen.</h3>
+          <p>Even when I have a lot to say, you still make me feel heard.</p>
+        </div>
+
+        <div class="memory">
+          <span>02</span>
+          <h3>The little efforts.</h3>
+          <p>It’s the little things you do that I appreciate the most.</p>
+        </div>
+
+        <div class="memory">
+          <span>03</span>
+          <h3>Being your girl.</h3>
+          <p>Kinda crazy that we found our way back to each other, but I’m so happy we did.</p>
+        </div>
+
+        <div class="memory">
+          <span>04</span>
+          <h3>Our random moments.</h3>
+          <p>The unserious conversations, food, and everything in between.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="music-section">
+      <div class="music-box">
+        <div class="vinyl">♪</div>
+        <div>
+          <p class="eyebrow">This song is dedicated to you, baby.</p>
+          <h2 id="songTitle">Someday</h2>
+          <p id="songArtist">Replace the audio file in script.js</p>
+        </div>
+        <button id="musicButton2" class="play-circle">▶</button>
+      </div>
+
+      <!--
+        EASY MUSIC SETUP:
+        Put your MP3 inside the "music" folder.
+        Then change AUDIO_FILE in script.js.
+        Example: const AUDIO_FILE = "music/ours.mp3";
+      -->
+      <audio id="ourSong" preload="metadata"></audio>
+    </section>
+<!-- SOMEDAY LYRICS -->
+<section class="lyrics-section">
+
+  <div class="lyrics-heading">
+    <p class="eyebrow"> MY FAVORITE PART ♡, BABY.</p>
+
+    <h2>Someday ♡</h2>
+
+    <p class="lyrics-intro">
+      A few words from the song that remind me of you.
+    </p>
+  </div>
+
+  <div class="lyrics-list">
+
+    <div class="lyric-card">
+      <p class="lyric">
+        I wanna be the melting candle to your flame
+      </p>
+
+      <p class="lyric-message">
+        I just want to be someone who stays close to you, through everything.
+      </p>
+    </div>
+
+
+    <div class="lyric-card">
+      <p class="lyric">
+        Your closest friend, your fiercest love, one and the same
+      </p>
+
+      <p class="lyric-message">
+        I love that I get to be your girlfriend and your safe person too.
+      </p>
+    </div>
+
+
+    <div class="lyric-card">
+      <p class="lyric">
+        Some things will never ever change
+      </p>
+
+      <p class="lyric-message">
+        No matter how much things change around us, I hope this stays the same.
+      </p>
+    </div>
+
+
+    <div class="lyric-card">
+      <p class="lyric">
+        I wanna be there when the sunlight hits your face
+      </p>
+
+      <p class="lyric-message">
+        I want to be there for your little moments, even the ordinary ones.
+      </p>
+    </div>
+
+
+    <div class="lyric-card">
+      <p class="lyric">
+        I wanna be there for you every single day
+      </p>
+
+      <p class="lyric-message">
+        Even on the hard days, I want you to know you have me.
+      </p>
+    </div>
+
+
+    <div class="lyric-card">
+      <p class="lyric">
+        All that to say
+      </p>
+
+      <p class="lyric-message">
+        I guess this is just my way of saying what I sometimes can't put into words.
+      </p>
+    </div>
+
+
+    <div class="lyric-card">
+      <p class="lyric">
+        All that to say
+      </p>
+
+      <p class="lyric-message">
+        I hope you always know how much you mean to me, baby.
+      </p>
+    </div>
+
+
+    <div class="lyric-card final-lyric">
+      <p class="lyric">
+        Someday my love will stay the same
+      </p>
+
+      <p class="lyric-message">
+        Maybe that's what I want most — to keep choosing you, again and again. ♡
+      </p>
+    </div>
+
+  </div>
+
+</section>
+    <section class="ending">
+      <p class="eyebrow">AND ONE LAST THING...</p>
+      <h2>I'm really happy it's you. 🤍</h2>
+      <p>
+        Thank you for being here. Happy first monthsary, baby.
+      </p>
+      
+      <div class="heart-line">— ♡ —</div>
+    </section>
+    <!-- =========================
+     FINAL THREE PHOTOS
+     ========================= -->
+
+<<section class="final-photos">
+
+  <p class="eyebrow">MEMORY LANE ♡</p>
+
+  <div class="photo-row">
+
+    <div class="final-photo">
+      <img src="c:\Users\almoite\Downloads\13830406-1eb0-499c-aaae-19c2ec7c4265.jpeg" alt="Our memory">
+    </div>
+
+    <div class="final-photo">
+      <img src="c:\Users\almoite\Downloads\4ba074f4-64c9-49eb-8ed7-fafb8377cf96.jpeg" alt="Our memory">
+    </div>
+
+    <div class="final-photo">
+     <img src="c:\Users\almoite\Pictures\Screenshot 2026-10-21 214749_edited.png" alt="Our memory">
+    </div>
+
+  </div>
+
+  <p class="final-message">
+    Made with love, just for you. <span>♡</span>
+  </p>
+
+</section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
